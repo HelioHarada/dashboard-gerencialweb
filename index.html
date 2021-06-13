@@ -5,13 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
         integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ=="
         crossorigin="anonymous" />
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.bundle.js"></script>
     <link rel="stylesheet" href="style.css">
+
     <title>Document</title>
 </head>
+
 
 <body>
 
@@ -47,293 +51,323 @@
         <div>
             <div class="fs-container" id="container-dashboard">
                 <div class="ui form">
-        <div class=" ui  stackable grid">
+                    <div class=" ui  stackable grid">
 
-            <!-- left side -->
-            <div class="eight wide column">
-                <!-- card-ganho-total -->
-                <div class="ui">
-                    <div class="fs-card-value">
-                        <div>
-                            <p align="center">Faturamento do dia</p>
-                            <h6 align="center" class="fs-style-h6">R$30.0000,00</h6>
-                        </div>
-                        <div>
-                            <img class="fs-lg-icon" src="icon-up.svg" alt="">
-                        </div>
-                    </div>
+                        <!-- left side -->
+                        <div class="eight wide column">
+                            <!-- card-ganho-total -->
+                            <div class="ui">
+                                <div class="fs-card-value">
+                                    <div>
+                                        <p align="center">Faturamento do dia</p>
+                                        <h6 align="center" class="fs-style-h6">R$30.0000,00</h6>
+                                    </div>
+                                    <div>
+                                        <img class="fs-lg-icon" src="icon-up.svg" alt="">
+                                    </div>
+                                </div>
 
-                    <!-- Map -->
-                    <div class="ui fs-box-map">
-                        <h5>Localização dos vendedores</h5>
-                        <div class="map">
-                            <img src="map.png" class="fs-map-container-localizacao" alt="">
+                                <!-- Map -->
+                                <div class="ui fs-box-map">
+                                    <h5>Localização dos vendedores</h5>
+                                    <div class="map">
+                                        <img src="map.png" class="fs-map-container-localizacao" alt="">
+                                    </div>
+
+                                    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14775.112380477256!2d-49.9449856!3d-22.2105379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bfd730aa7f99c7%3A0x83efcba0f0bbe84a!2sTerminal%20Urbano%20de%20Mar%C3%ADlia!5e0!3m2!1spt-BR!2sbr!4v1616100261530!5m2!1spt-BR!2sbr" class="fs-mapa" allowfullscreen="" loading="lazy"></iframe> -->
+                                </div>
+                            </div>
                         </div>
 
-                        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14775.112380477256!2d-49.9449856!3d-22.2105379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bfd730aa7f99c7%3A0x83efcba0f0bbe84a!2sTerminal%20Urbano%20de%20Mar%C3%ADlia!5e0!3m2!1spt-BR!2sbr!4v1616100261530!5m2!1spt-BR!2sbr" class="fs-mapa" allowfullscreen="" loading="lazy"></iframe> -->
+                        <!-- Right side -->
+                        <div class="eight wide column">
+                            <div class="fs-right-side">
+                                <h2>Lista de Vendedores</h2>
+
+                                <div class="ui icon input fs-search-icon">
+                                    <input type="text" placeholder="Buscar vendedor">
+                                    <i class="circular search link icon"></i>
+                                </div>
+
+
+                                <div class="ui">
+
+                                    <!-- Card-vendedor -->
+                                    <div class="fs-card-vendedor">
+
+                                        <!-- card avatar -->
+                                        <div class="fs-box-avatar">
+                                            <div class="fs-avatar">
+                                                <span>LM</span>
+                                            </div>
+                                            <br>
+                                            <h6 class="fs-style-h6">Leonardo Molina</h6>
+                                        </div>
+
+                                        <!-- card info -->
+                                        <div class="ui three column grid info-center">
+                                            <div class="row">
+                                                <div class="column fs-box-info">
+                                                    <div class="fs-info-vendedor">
+                                                        <p class="legenda">Primeira comunicação</p>
+                                                        <div class="fs-icon-info">
+                                                            <img src="clock.svg" alt="">
+                                                            <span>15/05/2021</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="column fs-box-info">
+                                                    <div class="fs-info-vendedor">
+                                                        <p class="legenda">Primeira comunicação</p>
+                                                        <div class="fs-icon-info">
+                                                            <img src="clock.svg" alt="">
+                                                            <span>15/05/2021</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="row">
+                                                <div class="column fs-box-info">
+                                                    <div class="fs-info-vendedor">
+                                                        <p class="legenda">Primeira comunicação</p>
+                                                        <div class="fs-icon-info">
+                                                            <img src="clock.svg" alt="">
+                                                            <span>15/05/2021</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="column fs-box-info">
+                                                    <div class="fs-info-vendedor">
+                                                        <p class="legenda">Primeira comunicação</p>
+                                                        <div class="fs-icon-info">
+                                                            <img src="clock.svg" alt="">
+                                                            <span>15/05/2021</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- button left -->
+                                        <div class="btn-detail">
+                                            <img src="plus.svg" alt="">
+                                        </div>
+                                    </div>
+
+                                    <!-- Card-vendedor -->
+                                    <div class="fs-card-vendedor">
+
+                                        <!-- card avatar -->
+                                        <div class="fs-box-avatar">
+                                            <div class="fs-avatar">
+                                                <span>LM</span>
+                                            </div>
+                                            <br>
+                                            <h6 class="fs-style-h6">Leonardo Molina</h6>
+                                        </div>
+
+                                        <!-- card info -->
+                                        <div class="ui three column grid info-center">
+                                            <div class="row">
+                                                <div class="column fs-box-info">
+                                                    <div class="fs-info-vendedor">
+                                                        <p class="legenda">Primeira comunicação</p>
+                                                        <div class="fs-icon-info">
+                                                            <img src="clock.svg" alt="">
+                                                            <span>15/05/2021</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="column fs-box-info">
+                                                    <div class="fs-info-vendedor">
+                                                        <p class="legenda">Primeira comunicação</p>
+                                                        <div class="fs-icon-info">
+                                                            <img src="clock.svg" alt="">
+                                                            <span>15/05/2021</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="row">
+                                                <div class="column fs-box-info">
+                                                    <div class="fs-info-vendedor">
+                                                        <p class="legenda">Primeira comunicação</p>
+                                                        <div class="fs-icon-info">
+                                                            <img src="clock.svg" alt="">
+                                                            <span>15/05/2021</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="column fs-box-info">
+                                                    <div class="fs-info-vendedor">
+                                                        <p class="legenda">Primeira comunicação</p>
+                                                        <div class="fs-icon-info">
+                                                            <img src="clock.svg" alt="">
+                                                            <span>15/05/2021</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- button left -->
+                                        <div class="btn-detail">
+                                            <img src="plus.svg" alt="">
+                                        </div>
+                                    </div>
+
+                                    <!-- Card-vendedor -->
+                                    <div class="fs-card-vendedor">
+
+                                        <!-- card avatar -->
+                                        <div class="fs-box-avatar">
+                                            <div class="fs-avatar">
+                                                <span>LM</span>
+                                            </div>
+                                            <br>
+                                            <h6 class="fs-style-h6">Leonardo Molina</h6>
+                                        </div>
+
+                                        <!-- card info -->
+                                        <div class="ui three column grid info-center">
+                                            <div class="row">
+                                                <div class="column fs-box-info">
+                                                    <div class="fs-info-vendedor">
+                                                        <p class="legenda">Primeira comunicação</p>
+                                                        <div class="fs-icon-info">
+                                                            <img src="clock.svg" alt="">
+                                                            <span>15/05/2021</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="column fs-box-info">
+                                                    <div class="fs-info-vendedor">
+                                                        <p class="legenda">Primeira comunicação</p>
+                                                        <div class="fs-icon-info">
+                                                            <img src="clock.svg" alt="">
+                                                            <span>15/05/2021</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="row">
+                                                <div class="column fs-box-info">
+                                                    <div class="fs-info-vendedor">
+                                                        <p class="legenda">Primeira comunicação</p>
+                                                        <div class="fs-icon-info">
+                                                            <img src="clock.svg" alt="">
+                                                            <span>15/05/2021</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="column fs-box-info">
+                                                    <div class="fs-info-vendedor">
+                                                        <p class="legenda">Primeira comunicação</p>
+                                                        <div class="fs-icon-info">
+                                                            <img src="clock.svg" alt="">
+                                                            <span>15/05/2021</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- button left -->
+                                        <div class="btn-detail">
+                                            <img src="plus.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="field"></div>
+
+                                    <!-- Pagination -->
+                                    <div class="ui fs-box-pagination">
+                                        <div class="fs-pagination">
+                                            <div class="ui stackable grid">
+                                                <div class="two column row">
+                                                    <div class="ten wide column">
+                                                        <div class="ui pagination menu">
+                                                            <a class="icon item">
+                                                                <i class="double angle left icon"></i>
+                                                            </a>
+                                                            <a class="icon item">
+                                                                <i class="angle left icon"></i>
+                                                            </a>
+                                                            <a class="icon item">1</a>
+                                                            <a class="icon item">2</a>
+                                                            <a class="icon item">3</a>
+                                                            <a class="icon item">
+                                                                <i class="angle right icon"></i>
+                                                            </a>
+                                                            <a class="icon item">
+                                                                <i class="double angle right icon"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="six wide column">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <!-- section chart -->
+                        <div class="sixteen wide column">
+                            <div class="fs-box-chart">
+                                <h1>Seu relátorio de hoje</h1>
+
+                                <!-- Chart -->
+                                <div class="ui equal width center aligned padded grid">
+                                    <div class="row">
+
+                                        <!-- Chart 1  -->
+                                        <div class=" column">
+                                            <div class="chart-container">
+                                                <canvas  id="myChart"></canvas>
+                                            </div>
+                                        </div>
+
+                                        <div class=" column">
+                                                <div class="chart-container">
+                                                    <canvas  id="myChart2"></canvas>
+                                                </div>
+                                            </div>
+
+                                        <!-- Chart 2  -->
+                                        <div class=" column">
+                                            <p id="demo">aaaa</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
                     </div>
                 </div>
-            </div>
-
-            <!-- Right side -->
-            <div class="eight wide column">
-                <div class="fs-right-side">
-                    <h2>Lista de Vendedores</h2>
-
-                    <div class="ui icon input fs-search-icon">
-                        <input type="text" placeholder="Buscar vendedor">
-                        <i class="circular search link icon"></i>
-                    </div>
-
-
-                    <div class="ui">
-
-                        <!-- Card-vendedor -->
-                        <div class="fs-card-vendedor">
-
-                            <!-- card avatar -->
-                            <div class="fs-box-avatar">
-                                <div class="fs-avatar">
-                                    <span>LM</span>
-                                </div>
-                                <br>
-                                <h6 class="fs-style-h6">Leonardo Molina</h6>
-                            </div>
-
-                            <!-- card info -->
-                            <div class="ui three column grid info-center">
-                                <div class="row">
-                                    <div class="column fs-box-info">
-                                        <div class="fs-info-vendedor">
-                                            <p class="legenda">Primeira comunicação</p>
-                                            <div class="fs-icon-info">
-                                                <img src="clock.svg" alt="">
-                                                <span>15/05/2021</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="column fs-box-info">
-                                        <div class="fs-info-vendedor">
-                                            <p class="legenda">Primeira comunicação</p>
-                                            <div class="fs-icon-info">
-                                                <img src="clock.svg" alt="">
-                                                <span>15/05/2021</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="row">
-                                    <div class="column fs-box-info">
-                                        <div class="fs-info-vendedor">
-                                            <p class="legenda">Primeira comunicação</p>
-                                            <div class="fs-icon-info">
-                                                <img src="clock.svg" alt="">
-                                                <span>15/05/2021</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="column fs-box-info">
-                                        <div class="fs-info-vendedor">
-                                            <p class="legenda">Primeira comunicação</p>
-                                            <div class="fs-icon-info">
-                                                <img src="clock.svg" alt="">
-                                                <span>15/05/2021</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <!-- button left -->
-                            <div class="btn-detail">
-                                <img src="plus.svg" alt="">
-                            </div>
-                        </div>
-
-                        <!-- Card-vendedor -->
-                        <div class="fs-card-vendedor">
-
-                            <!-- card avatar -->
-                            <div class="fs-box-avatar">
-                                <div class="fs-avatar">
-                                    <span>LM</span>
-                                </div>
-                                <br>
-                                <h6 class="fs-style-h6">Leonardo Molina</h6>
-                            </div>
-
-                            <!-- card info -->
-                            <div class="ui three column grid info-center">
-                                <div class="row">
-                                    <div class="column fs-box-info">
-                                        <div class="fs-info-vendedor">
-                                            <p class="legenda">Primeira comunicação</p>
-                                            <div class="fs-icon-info">
-                                                <img src="clock.svg" alt="">
-                                                <span>15/05/2021</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="column fs-box-info">
-                                        <div class="fs-info-vendedor">
-                                            <p class="legenda">Primeira comunicação</p>
-                                            <div class="fs-icon-info">
-                                                <img src="clock.svg" alt="">
-                                                <span>15/05/2021</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="row">
-                                    <div class="column fs-box-info">
-                                        <div class="fs-info-vendedor">
-                                            <p class="legenda">Primeira comunicação</p>
-                                            <div class="fs-icon-info">
-                                                <img src="clock.svg" alt="">
-                                                <span>15/05/2021</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="column fs-box-info">
-                                        <div class="fs-info-vendedor">
-                                            <p class="legenda">Primeira comunicação</p>
-                                            <div class="fs-icon-info">
-                                                <img src="clock.svg" alt="">
-                                                <span>15/05/2021</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <!-- button left -->
-                            <div class="btn-detail">
-                                <img src="plus.svg" alt="">
-                            </div>
-                        </div>
-
-                        <!-- Card-vendedor -->
-                        <div class="fs-card-vendedor">
-
-                            <!-- card avatar -->
-                            <div class="fs-box-avatar">
-                                <div class="fs-avatar">
-                                    <span>LM</span>
-                                </div>
-                                <br>
-                                <h6 class="fs-style-h6">Leonardo Molina</h6>
-                            </div>
-
-                            <!-- card info -->
-                            <div class="ui three column grid info-center">
-                                <div class="row">
-                                    <div class="column fs-box-info">
-                                        <div class="fs-info-vendedor">
-                                            <p class="legenda">Primeira comunicação</p>
-                                            <div class="fs-icon-info">
-                                                <img src="clock.svg" alt="">
-                                                <span>15/05/2021</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="column fs-box-info">
-                                        <div class="fs-info-vendedor">
-                                            <p class="legenda">Primeira comunicação</p>
-                                            <div class="fs-icon-info">
-                                                <img src="clock.svg" alt="">
-                                                <span>15/05/2021</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="row">
-                                    <div class="column fs-box-info">
-                                        <div class="fs-info-vendedor">
-                                            <p class="legenda">Primeira comunicação</p>
-                                            <div class="fs-icon-info">
-                                                <img src="clock.svg" alt="">
-                                                <span>15/05/2021</span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="column fs-box-info">
-                                        <div class="fs-info-vendedor">
-                                            <p class="legenda">Primeira comunicação</p>
-                                            <div class="fs-icon-info">
-                                                <img src="clock.svg" alt="">
-                                                <span>15/05/2021</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <!-- button left -->
-                            <div class="btn-detail">
-                                <img src="plus.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="field"></div>  
-
-                        <!-- Pagination -->
-                        <div class="ui fs-box-pagination">
-                            <div class="fs-pagination">
-                                <div class="ui stackable grid"> 
-                                    <div class="two column row">
-                                        <div class="ten wide column">
-                                            <div class="ui pagination menu">
-                                                <a class="icon item">
-                                                    <i class="double angle left icon"></i>
-                                                </a>
-                                                <a class="icon item">
-                                                    <i class="angle left icon"></i>
-                                                </a>
-                                                <a class="icon item">1</a>
-                                                <a class="icon item">2</a>
-                                                <a class="icon item">3</a>
-                                                <a class="icon item">
-                                                    <i class="angle right icon"></i>
-                                                </a>
-                                                <a class="icon item">
-                                                    <i class="double angle right icon"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="six wide column">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
 
             </div>
-        
-            <div class="eight wide column">
-                <h1>Oi</h1>
-            </div>
-
         </div>
-    </div>
-
-</div>
-</div>
     </div>
 
 
@@ -341,4 +375,8 @@
 
 </body>
 
+
+
+
+<script src="main.js"></script>
 </html>

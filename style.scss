@@ -34,9 +34,6 @@ body{
 h6 {
   font-family: Lato;
   font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  margin: 0px;
   }
 
  
@@ -54,6 +51,12 @@ h6 {
 .flex-left{
     @include flex-left;
     padding: 0px;
+}
+
+.fs-search-icon {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 .bg-primary{
@@ -139,7 +142,25 @@ h6 {
 
 // left side
 
-.card-value{
+.fs-style-h6 {
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0px;
+}
+
+.fs-style-h6-small {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0px;
+}
+
+.fs-style-h6-tiny {
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0px;
+}
+
+.fs-card-value{
   @include center();
   background: #FFFAFA;
   padding: 8px;
@@ -149,7 +170,7 @@ h6 {
 }
 
 
-.lg-icon{
+.fs-lg-icon{
   width: 100px;
   height: 100px;
   padding: 16px;
@@ -171,7 +192,7 @@ h6 {
 
 
 
-.right-side{
+.fs-right-side{
  
   padding: 16px;
   background: #FFFAFA;
@@ -195,15 +216,15 @@ h6 {
     }
   }
 
-  .box-info{
+  .fs-box-info{
     @include center;
     
   }
 
-  .info-vendedor{
+  .fs-info-vendedor{
     @include center-colunm();
     
-    .icon-info{
+    .fs-icon-info{
       display: flex;
     }
   }
@@ -222,7 +243,7 @@ h6 {
   color: #333333;
   }
 
-  .card-vendedor{
+  .fs-card-vendedor{
     margin-top: 8px;
     padding: 16px;
     display: flex;
@@ -232,7 +253,7 @@ h6 {
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
     border-radius: 10px;
 
-    .box-avatar{
+    .fs-box-avatar{
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -242,7 +263,7 @@ h6 {
       h6{
         white-space: nowrap;
       }
-      .avatar{
+      .fs-avatar{
         border-radius: 100px;
     
         border: 1px solid #585DA6;
@@ -277,7 +298,7 @@ h6 {
 }
 
 
-.box-map{
+.fs-box-map{
   padding: 32px;
   margin-top: 16px;
   background: #FFFAFA;
@@ -302,7 +323,51 @@ h6 {
 
 
 }
-.box-pagination{
-  @include center();
-  margin-top: 16px;
+
+.fs-box-pagination a {
+  background-color: #E8E6F2 !important;
+  color: #333333 !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  line-height: 16px !important;
 }
+
+.fs-box-pagination a:hover {
+  background-color: #d1d1d3 !important;
+  color: #333333 !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  line-height: 16px !important;
+}
+
+.fs-box-pagination .active {
+  background-color: #808080 !important;
+  color: #FFF !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  line-height: 16px !important;
+}
+
+.fs-box-chart{
+  padding: 16px;
+  background: #FFFAFA;
+  /* Gray 5 */
+
+  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  /* card-simple */
+
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+  border-radius: 10px;
+
+  .chart-container{
+    
+   padding: 32px;
+
+  }
+
+}
+
