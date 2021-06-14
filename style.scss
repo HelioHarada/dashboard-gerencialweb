@@ -193,37 +193,29 @@ h6 {
 
 
 .fs-right-side{
- 
+  position: relative;
   padding: 16px;
   background: #FFFAFA;
   /* Gray 5 */
-
   border: 1px solid #E0E0E0;
   box-sizing: border-box;
   /* card-simple */
-
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
   border-radius: 10px;
-
+  max-height: 100%;
+  min-height: 100%;
   .info-center{
-   
-
     max-height: 100%;
     @include center;
-
-    .row{
- 
-    }
   }
 
   .fs-box-info{
     @include center;
-    
   }
 
   .fs-info-vendedor{
     @include center-colunm();
-    
+  
     .fs-icon-info{
       display: flex;
     }
@@ -232,16 +224,16 @@ h6 {
   .legenda{
     /* LENGENDA (10px) */
   
-  font-family: Lato;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 10px;
-  line-height: 12px;
-  white-space: nowrap;
-  /* identical to box height */
-  /* Gray 1 */
-  color: #333333;
-  }
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    white-space: nowrap;
+    /* identical to box height */
+    /* Gray 1 */
+    color: #333333;
+    }
 
   .fs-card-vendedor{
     margin-top: 8px;
@@ -265,7 +257,6 @@ h6 {
       }
       .fs-avatar{
         border-radius: 100px;
-    
         border: 1px solid #585DA6;
         background-color: #F2F2F2;
         width: 50px;
@@ -282,8 +273,7 @@ h6 {
           color: #333333;
           margin: 0px;
           padding: 0px;
-          
-        
+  
         }
       }
     }
@@ -294,6 +284,28 @@ h6 {
     background-color: $primary;
     padding: 8px;
     border-radius: 0px 10px 10px 0px;
+  }
+
+
+  .list-card-vendedor{
+    
+    position: relative;
+    max-height: 550px;
+    overflow-y: auto;
+
+    
+  }
+
+  .fs-box-pagination{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 16px;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: flex-end !important;
+
+
   }
 }
 
@@ -323,6 +335,7 @@ h6 {
 
 
 }
+
 
 .fs-box-pagination a {
   background-color: #E8E6F2 !important;
@@ -364,10 +377,101 @@ h6 {
   border-radius: 10px;
 
   .chart-container{
-    
    padding: 32px;
-
   }
 
 }
 
+
+// PROFILE
+
+#container-profile{
+  padding: 16px;
+
+
+  .fs-box-column{
+    padding: 16px;
+    background: #FFFAFA;
+    border-radius: 10px;
+    
+  }
+
+  .fs-box-avatar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FFFAFA;
+    border-radius: 10px;
+    padding: 16px;
+    filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.16));
+    
+  
+    p{
+      white-space: nowrap;
+      font-family: Lato;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 19px;
+      
+      /* Gray 2 */
+      
+      color: #4F4F4F;
+      
+    }
+  
+    .fs-avatar{
+      border-radius: 100px;
+      border: 1px solid #585DA6;
+      background-color: #F2F2F2;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+  
+      span{
+        font-size: 24px;
+        font-family: 'Lato',sans-serif;
+        font-weight: 400;
+        color: #333333;
+        margin: 0px;
+        padding: 0px;
+  
+      }
+    }
+  }
+
+
+  .fs-box-value{
+    background: #FFFAFA;
+    border-radius: 10px;
+  }
+
+  .fs-card-value{
+    @include center();
+    background: #FFFAFA;
+    padding: 8px;
+    /* card-simple */
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    height: 100%;
+  }
+
+  .fs-lg-icon{
+    width: 80px;
+    height: 80px;
+  }
+
+}
+
+
+
+// FIX
+
+.fix-padding{
+  padding: 0 !important;
+  padding: 8px !important;
+  
+}

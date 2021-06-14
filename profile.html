@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+        integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ=="
+        crossorigin="anonymous" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.bundle.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+
+
+<body>
+
+    <div class="ui main">
+
+        <!-- Header -->
+        <br>
+        <div class="ui secondary menu">
+            <div class="header item">Brand</div>
+            <a class="active item">
+                Home
+            </a>
+            <a class="item">
+                Messages
+            </a>
+            <a class="item">
+                Friends
+            </a>
+            <div class="right menu">
+                <div class="item">
+                    <div class="ui icon input">
+                        <input type="text" placeholder="Search...">
+                        <i class="search link icon"></i>
+                    </div>
+                </div>
+                <a class="ui item">
+                    Logout
+                </a>
+            </div>
+        </div>
+        <div class="ui divider"></div>
+        <br>
+        <div>
+            <div class="fs-container" id="container-profile">
+                <div class="ui stackable grid">
+
+                    <!-- SECTION CONTAINER INFOS LIST CARDS -->
+                    <div class=" row">
+
+                        <!-- Card 1 -->
+                        <div class=" two wide column fix-padding">
+                            <div class="fs-box-avatar">
+                                <div class="fs-avatar">
+                                    <span>LM</span>
+                                </div>
+                                <br>
+                                <p>Leonarndo Molina</p>
+                            </div>
+                        </div>
+
+                        <!-- card 2 -->
+                        <div class=" four wide column fix-padding">
+                            <div class="fs-card-value">
+                                <div>
+                                    <p align="center">Faturamento do dia</p>
+                                    <h6 align="center" class="fs-style-h6">R$30.0000,00</h6>
+                                </div>
+                                <div>
+                                    <img class="fs-lg-icon" src="icon-up.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- card 3 -->
+                        <div class=" three wide column fix-padding">
+                            <div class="fs-card-value">
+                                <div>
+                                    <p align="center">Total de pedidos hoje</p>
+                                    <!-- Value -->
+                                    <h6 align="center" class="fs-style-h6">12</h6>
+                                </div>
+                                <div>
+                                    <img class="fs-lg-icon" src="contract.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- card 4 -->
+                        <div class=" three wide column fix-padding">
+                            <div class="fs-card-value">
+                                <div>
+                                    <p align="center">Total de visitas hoje</p>
+                                    <!-- Value -->
+                                    <h6 align="center" class="fs-style-h6">12</h6>
+                                </div>
+                                <div>
+                                    <img class="fs-lg-icon" src="walking.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class=" four wide column fix-padding">
+                            <div class="fs-card-value">
+                                <div class="fs-info-vendedor">
+                                    <p class="legenda">Primeira comunicação</p>
+                                    <div class="fs-icon-info">
+                                        <img src="clock.svg" alt="">
+                                        <span>15/05/2021</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="ui grid">
+                    <!-- SECTION LIST -->
+                    <div class="sixteen wide column">
+                        <!-- BOX CONTAINER -->
+                        <div class="fs-box-chart">
+                            <!-- SELECT INPUTS -->
+                            <div>
+                                <select class="ui compact selection dropdown">
+                                    <option value="all">All</option>
+                                    <option selected="" value="articles">Artigos</option>
+                                    <option value="products">Products</option>
+                                </select>
+
+                                <select class="ui compact selection dropdown">
+                                    <option value="all">All</option>
+                                    <option selected="" value="articles">Artigos</option>
+                                    <option value="products">Products</option>
+                                </select>
+                            </div>
+
+                            <div class="sixteen wide column">
+                                
+                                <div>
+                                    <!-- TABLE LIST  -->
+                                    <table class="ui celled table">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Idade</th>
+                                                <th>Job</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td data-label="Name">James</td>
+                                                <td data-label="Age">24</td>
+                                                <td data-label="Job">Engineer</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="Name">Jill</td>
+                                                <td data-label="Age">26</td>
+                                                <td data-label="Job">Engineer</td>
+                                            </tr>
+                                            <tr>
+                                                <td data-label="Name">Elyse</td>
+                                                <td data-label="Age">24</td>
+                                                <td data-label="Job">Designer</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+
+
+
+<script src="main.js"></script>
+
+</html>
