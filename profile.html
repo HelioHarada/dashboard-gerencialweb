@@ -128,7 +128,7 @@
                     <!-- SECTION LIST -->
                     <div class="sixteen wide column">
                         <!-- BOX CONTAINER -->
-                        <div class="fs-box-chart">
+                        <div class="fs-box">
                             <!-- SELECT INPUTS -->
                             <div>
                                 <select class="ui compact selection dropdown">
@@ -145,7 +145,7 @@
                             </div>
 
                             <div class="sixteen wide column">
-                                
+
                                 <div>
                                     <!-- TABLE LIST  -->
                                     <table class="ui celled table">
@@ -176,9 +176,61 @@
                                     </table>
                                 </div>
                             </div>
-                        </div>
 
-                    </div>
+                            <div class=".fs-box-map">
+                                <img class="fs-map-profile" src="map2.png" alt="">
+                            </div>
+                        </div>
+                    </div> <!-- LISTA E MAPS -->
+
+
+                    <!-- CHART RELATORIO -->
+                    <div class="fs-box sixteen wide column">
+                        <!-- SECTION CHART(GRÁFICOS) VENDAS -->
+                        <div id="fs-section-chart" class="sixteen wide column">
+                            <div class="fs-box-chart">
+                                <h1 align="center">Seu relátorio de hoje</h1>
+
+                                <div class="ui equal width center aligned padded grid">
+                                    <div class="row">
+                                        <div class=" column">
+                                            <!-- container chart -->
+                                            <div class="chart-container">
+                                                <!-- Chart, Onde é gerado o gráfico atraves da API (main.js) -->
+                                                <canvas id="myChart"></canvas>
+                                            </div>
+                                        </div>
+                                        <!-- Chart 2  -->
+                                        <div class=" column">
+                                            <!-- container chart -->
+                                            <div class="chart-container">
+                                                <!-- Chart, Onde é gerado o gráfico atraves da API (main.js) -->
+                                                <canvas id="myChart2"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- CHART RELATORIO  -->
+
+                    <!-- SECTION CHART(LINE-->
+                    <div class="sixteen wide column">
+                        <div class="fs-box-chart">
+                            <h1 align="center">Ranking de motivos de não venda</h1>
+                            <div class="ui equal width center aligned padded grid">
+                                <div class="row">
+                                    <div class="ten wide column">
+                                        <div class="chart-container">
+                                            <!-- Chart, Onde é gerado o gráfico atraves da API (main.js) -->
+                                            <canvas id="chartLine"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- SECTION CHART(LINE-->
+
                 </div>
             </div>
         </div>
@@ -192,6 +244,6 @@
 
 
 
-<script src="main.js"></script>
+<script src="main-profile.js"></script>
 
 </html>

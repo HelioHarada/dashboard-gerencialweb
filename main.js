@@ -1,3 +1,12 @@
+
+$('#data-picker').click(function(){
+  $('.modal').modal('show');
+  
+})
+
+
+
+
 function createChart(element) {
 
   // ### paramentros
@@ -24,10 +33,7 @@ function createChart(element) {
 
   };
   // ### Criação do chart com pareametros
-  new Chart(
-    element,
-    config
-  );
+  create(element,config)
 
 
 }
@@ -86,18 +92,58 @@ function createBar(element) {
     }
   };
 
-  console.log(config)
-  // ### Criação do chart com pareametros
+  create(element,config)
+
+}
+
+function createLine(element) {
+
+  const labels = ['Motivo 1', 'Motivo 2', 'Motivo 3', 'motvivo 4']
+  const data = {
+    labels: labels,
+    datasets: [{
+      label: 'My First Dataset',
+      data: [65, 59, 80, 81, 56, 55, 40],
+      fill: false,
+      borderColor: 'rgb(75, 192, 192)',
+      tension: 0.1
+    }]
+  };
+
+  const config = {
+    type: 'line',
+    data: data,
+  };
+
+  create(element,config)
+
+}
+
+
+function create(element,config){
   new Chart(
     element,
     config
   );
-
 }
 
+
+
+
+
+
+window.onload = function() {
 //  ### Criação dos chart por ID 
-createChart(document.getElementById("myChart"))
+console.log(document.getElementById("myBar"))
+console.log(document.getElementById("chartLine"))
+console.log(document.getElementById("myChart2"))
+console.log(document.getElementById("myChart"))
 
-createChart(document.getElementById("myChart2"))
+createChart(document.getElementById("myChart"));
 
-createBar(document.getElementById("myBar"))
+createChart(document.getElementById("myChart2"));
+
+
+createBar(document.getElementById("myBar"));
+
+}
