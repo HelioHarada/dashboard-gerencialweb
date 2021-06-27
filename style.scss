@@ -11,10 +11,18 @@ h6 {
   font-style: normal;
 }
 
+// BTN DATE PICK FLOAT
+
+::selection {
+  background-color: none !important;
+}
+
 .fs-fixed-button{
   position: fixed;
   right: 32px;
   bottom: 32px;
+  
+
   
   button{
     /* primaria */
@@ -41,9 +49,15 @@ h6 {
 
   color: #F2F2F2;
 
-  &::selection {
-    background-color: none !important;
-    text-decoration: none;
+  // trainsation
+
+
+
+  &:hover{
+    transition-duration: .5s;
+    transition-timing-function: linear;
+    transition-delay: .1s;
+    background: rgb(34, 40, 129);
   }
 
     }
@@ -188,7 +202,8 @@ h6 {
   max-height: 100%;
   display: flex !important;
   align-items: center !important;
-  justify-content: center !important;
+  justify-content: space-around!important;
+  padding: 8px 0px 8px 0px;
 }
 
 .fs-right-side .fs-box-info {
@@ -202,10 +217,41 @@ h6 {
   flex-direction: column !important;
   align-items: center !important;
   justify-content: center !important;
+  
 }
 
 .fs-right-side .fs-info-vendedor .fs-icon-info {
   display: flex;
+}
+
+.fs-right-side .fs-info-vendedor .fs-icon-bateria{
+  
+  display: flex;
+}
+
+.fs-legenda{
+  /* LENGENDA (10px) */
+
+font-family: Lato;
+font-style: normal;
+font-weight: normal;
+font-size: 10px;
+line-height: 12px;
+/* identical to box height */
+
+}
+
+.fs-line-info{
+  // background: #ccc;
+  display: flex !important;
+  justify-content: space-around!important;
+}
+
+.fs-line-icon{
+  display: flex;
+  align-items: center;
+  
+  padding-left: 5px;
 }
 
 .fs-right-side .legenda {
@@ -223,12 +269,12 @@ h6 {
 
 .fs-right-side .fs-card-vendedor {
   margin-top: 8px;
-  padding: 16px;
   display: flex;
   background: #F2F2F2;
   /* card-simple */
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.16);
   border-radius: 10px;
+
 }
 
 .fs-right-side .fs-card-vendedor .fs-box-avatar {
@@ -454,3 +500,4 @@ h6 {
 /*# sourceMappingURL=style.css.map */
 
 /*# sourceMappingURL=style.scss.map */
+

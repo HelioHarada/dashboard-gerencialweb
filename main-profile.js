@@ -66,3 +66,5 @@ createChart(document.getElementById("myChart"));
 createChart(document.getElementById("myChart2"));
 
 createLine(document.getElementById("chartLine"));
+
+

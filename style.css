@@ -11,6 +11,10 @@ h6 {
   font-style: normal;
 }
 
+::selection {
+  background-color: none !important;
+}
+
 .fs-fixed-button {
   position: fixed;
   right: 32px;
@@ -36,9 +40,11 @@ h6 {
   /* Gray 6 */
   color: #F2F2F2;
 }
-.fs-fixed-button button::selection {
-  background-color: none !important;
-  text-decoration: none;
+.fs-fixed-button button:hover {
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+  transition-delay: 0.1s;
+  background: #222881;
 }
 
 .flex-left {
@@ -180,7 +186,8 @@ h6 {
   max-height: 100%;
   display: flex !important;
   align-items: center !important;
-  justify-content: center !important;
+  justify-content: space-around !important;
+  padding: 8px 0px 8px 0px;
 }
 
 .fs-right-side .fs-box-info {
@@ -200,6 +207,31 @@ h6 {
   display: flex;
 }
 
+.fs-right-side .fs-info-vendedor .fs-icon-bateria {
+  display: flex;
+}
+
+.fs-legenda {
+  /* LENGENDA (10px) */
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  /* identical to box height */
+}
+
+.fs-line-info {
+  display: flex !important;
+  justify-content: space-around !important;
+}
+
+.fs-line-icon {
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+}
+
 .fs-right-side .legenda {
   /* LENGENDA (10px) */
   font-family: Lato;
@@ -215,7 +247,6 @@ h6 {
 
 .fs-right-side .fs-card-vendedor {
   margin-top: 8px;
-  padding: 16px;
   display: flex;
   background: #F2F2F2;
   /* card-simple */

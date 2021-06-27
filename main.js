@@ -9,16 +9,24 @@ $('#data-picker').click(function(){
 
 function createChart(element) {
 
+  // Recebimento dos valores através da API de visitas e sem visitas. 
+  // Armazenando em variáveis 
+
+  const visitas = 50
+  const semVisitas = 21
+  const total = visitas + semVisitas
+  console.log(total)
+
   // ### paramentros
   const data = {
     labels: [
-      'Venda',
-      'Não venda',
+      'Com visita',
+      'Sem visita',
 
     ],
     datasets: [{
       label: 'My First Dataset',
-      data: [50, 12],
+      data: [visitas, semVisitas],
       backgroundColor: [
         '#6FCF97',
         '#219653',
@@ -26,12 +34,85 @@ function createChart(element) {
       hoverOffset: 4
     }]
   };
+  
+  
+
+
+  const options = {
+        title: {
+            display: true,
+            text: 'Não vendas: '+ total +""
+        },
+        legend: {
+          display: true,
+          // position: 'bottom'
+        },
+      
+}
+
   // ### Paramentros
   const config = {
     type: 'doughnut',
     data,
-
+    options
   };
+
+  
+
+  // ### Criação do chart com pareametros
+  create(element,config)
+
+
+}
+
+function createChart2(element) {
+
+  // Recebimento dos valores através da API de visitas e sem visitas. 
+  // Armazenando em variáveis 
+  const visitas = 12
+  const semVisitas = 3
+  const total = visitas + semVisitas
+
+  // ### paramentros
+  const data = {
+    labels: [
+      'Com visita',
+      'Sem visita',
+
+    ],
+    datasets: [{
+      label: 'My First Dataset',
+      data: [visitas, semVisitas],
+      backgroundColor: [
+        '#EB5757',
+        '#690100',
+      ],
+      hoverOffset: 4
+    }]
+  };
+
+
+  const options = {
+        title: {
+            display: true,
+            text: 'Não vendas: '+ total +""
+        },
+        legend: {
+          display: true,
+          // position: 'bottom'
+        },
+      
+}
+
+  // ### Paramentros
+  const config = {
+    type: 'doughnut',
+    data,
+    options
+  };
+
+  
+
   // ### Criação do chart com pareametros
   create(element,config)
 
@@ -120,10 +201,13 @@ function createLine(element) {
 }
 
 
+// Criação dos
 function create(element,config){
+  console.log(config)
   new Chart(
     element,
-    config
+    config,
+    
   );
 }
 
@@ -134,15 +218,11 @@ function create(element,config){
 
 window.onload = function() {
 //  ### Criação dos chart por ID 
-console.log(document.getElementById("myBar"))
-console.log(document.getElementById("chartLine"))
-console.log(document.getElementById("myChart2"))
-console.log(document.getElementById("myChart"))
+
 
 createChart(document.getElementById("myChart"));
 
-createChart(document.getElementById("myChart2"));
-
+createChart2(document.getElementById("myChart2"));
 
 createBar(document.getElementById("myBar"));
 
