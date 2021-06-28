@@ -14,6 +14,7 @@
         crossorigin="anonymous" />
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.bundle.js"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="semantic/dist/semantic.min.js"></script>
 
     <title>Document</title>
 </head>
@@ -219,10 +220,20 @@
                     <!-- SECTION CHART(LINE-->
                     <div class="sixteen wide column">
                         <div class="fs-box-chart">
-                            <h1 align="center">Ranking de motivos de não venda</h1>
+
+                            <h1 align="center">Relatório pedidos e vendas</h1>
+
                             <div class="ui equal width center aligned padded grid">
+
+                                <div class="ui buttons">
+                                    <button class="ui button btn-toggle semanal ">Semanal</button>
+                                    <button class="ui button btn-toggle mensal active">Mensal</button>
+                                </div>
+
                                 <div class="row">
-                                    <div class="ten wide column">
+
+                                    <div class="fourteen wide column">
+
                                         <div class="chart-container">
                                             <!-- Chart, Onde é gerado o gráfico atraves da API (main.js) -->
                                             <canvas id="chartLine"></canvas>
@@ -234,10 +245,15 @@
                     </div> <!-- SECTION CHART(LINE-->
 
 
-                    <div class="sixteen wide column fs-box">
-                        <input id="value" type="text">
-                        <button id="getPokemon" >search</button>
-                        <div class="pokemon"></div>
+                    <!-- Button fixed -->
+                    <div class="fs-fixed-button">
+                        <button id="data-picker-profile">16/04/2021</button>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="ui tiny modal fs-date-picker">
+                        <i class="close icon"></i>
+                        <h1>data picker</h1>
                     </div>
 
 
@@ -255,6 +271,5 @@
 
 
 <script src="main-profile.js"></script>
-<script src="teste.js"></script>
 
 </html>
