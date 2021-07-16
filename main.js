@@ -4,7 +4,7 @@ $('#data-picker').click(function(){
   
 })
 
-
+$('#fs-chart-round').hide();
 
 
 function createChart(element) {

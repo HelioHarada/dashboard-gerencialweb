@@ -20,6 +20,7 @@ h6 {
   right: 32px;
   bottom: 32px;
 }
+
 .fs-fixed-button button {
   /* primaria */
   width: 152px;
@@ -40,6 +41,7 @@ h6 {
   /* Gray 6 */
   color: #F2F2F2;
 }
+
 .fs-fixed-button button:hover {
   transition-duration: 0.5s;
   transition-timing-function: linear;
@@ -473,6 +475,8 @@ h6 {
   padding: 8px !important;
 }
 
+/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.scss.map */
 /*# sourceMappingURL=style.css.map */
 /*# sourceMappingURL=style.scss.map */
 
