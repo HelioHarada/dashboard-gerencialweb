@@ -6,9 +6,40 @@ body {
   margin: 16px;
 }
 
+h2 {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 52px;
+  line-height: 62px;
+  color: #374A59;
+}
+
+h3 {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 46px;
+  color: #374A59;
+}
+
+h5 {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+  color: #374A59;
+}
+
 h6 {
   font-family: Lato;
   font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 24px;
+  color: #374A59;
 }
 
 ::selection {
@@ -473,6 +504,49 @@ h6 {
 .fix-padding {
   padding: 0 !important;
   padding: 8px !important;
+}
+
+#fs-chart-withoutdata h6 {
+  margin: 32px 0px 32px 0px;
+}
+#fs-chart-withoutdata .box-img {
+  display: flex;
+  justify-content: center;
+}
+#fs-chart-withoutdata .box-img img {
+  width: 150px;
+}
+#fs-chart-withoutdata .fs-text-notfound {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+}
+#fs-chart-withoutdata .box-button {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+}
+#fs-chart-withoutdata .box-button button {
+  cursor: pointer;
+  /* Auto Layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  width: 150px;
+  /* primaria */
+  background: #3741BF;
+  /* button */
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+  border-radius: 6px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  /* Gray 6 */
+  color: #F2F2F2;
 }
 
 /*# sourceMappingURL=style.css.map */
